@@ -37,8 +37,8 @@ body {
 }
 
 img {
-  display: block;
-  width: 100%;
+  vertical-align: middle;
+  border-style: none;
 }
 
 h1,
@@ -49,6 +49,7 @@ h5,
 h6 {
   font-weight: var(--semibold);
   line-height: var(--dense);
+  color: #fff;
 }
 
 a {

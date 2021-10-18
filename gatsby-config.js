@@ -1,3 +1,4 @@
+const { getThemeVariables } = require("antd/dist/theme");
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 });
@@ -36,11 +37,28 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Contentful Starter",
-    description: "Official Contentful Gatsby Starter",
+    title: "Lovelace",
+    description: "DeFi-Enabled NFT Marketplace for Cardano",
   },
-  pathPrefix: "/gatsby-contentful-starter",
+  pathPrefix: "/lovelace",
   plugins: [
+    // {
+    //   resolve: `gatsby-plugin-compile-es6-packages`,
+    //   options: {
+    //     modules: [`xhr2-cookies`]
+    //   }
+    // },
+    {
+      resolve: `gatsby-plugin-less`,
+      options: {
+        lessOptions: {
+          javascriptEnabled: true,
+          modifyVars: getThemeVariables({
+            dark: true,
+          }),
+        },
+      },
+    },
     "gatsby-transformer-remark",
     "gatsby-transformer-sharp",
     "gatsby-plugin-react-helmet",

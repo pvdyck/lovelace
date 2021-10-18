@@ -20,7 +20,7 @@ class RootIndex extends React.Component {
 export default RootIndex
 
 export const pageQuery = graphql`
-  query HomeQuery {
+  query BlogsQuery {
     allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
       nodes {
         title

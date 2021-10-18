@@ -2,8 +2,10 @@ import React from 'react'
 
 import './variables.css'
 import './global.css'
+import './styles/index.less'
+
 import Seo from './seo'
-import Navigation from './navigation'
+import Header from './Header'
 import Footer from './footer'
 class Template extends React.Component {
   render() {
@@ -11,10 +13,14 @@ class Template extends React.Component {
 
     return (
       <>
-        <Seo />
-        <Navigation />
-        <main>{children}</main>
-        <Footer />
+      <div className='App'>
+        <div className='body'>
+          <Seo />
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </div>
+      </div>
       </>
     )
   }

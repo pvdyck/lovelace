@@ -1,0 +1,58 @@
+.featureContainer {
+  width: 260px;
+  height: 267px;
+  margin: 10px;
+  background: #19191b;
+  border-radius: 40px;
+  transition: all 0.15s ease-in;
+  box-shadow: none;
+  padding: 35px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    background: linear-gradient(
+      90deg,
+      rgba(213, 0, 249, 0.8) 0%,
+      rgba(101, 31, 255, 0.8) 100%
+    );
+    box-shadow: inset 0px -1px 10px rgba(0, 0, 0, 0.25);
+  }
+  @media only screen and (max-width: 1350px) {
+    margin-bottom: 16px;
+  }
+  @media only screen and (max-width: 800px) {
+    padding: 16px;
+    height: 208px;
+    width: 164px;
+  }
+  @media only screen and (max-width: 380px) {
+    padding: 8px;
+    height: 160px;
+    width: 100%;
+  }
+}
+
+.featureTextContainer {
+  font-family: Barlow;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  color: #ffffff;
+  margin-top: 20px;
+  @media only screen and (max-width: 800px) {
+    font-size: 18px;
+  }
+  @media only screen and (max-width: 380px) {
+    font-size: 16px;
+  }
+}
+
+.featureLogo {
+  width: 60px;
+  height: 60px;
+  @media only screen and (max-width: 800px) {
+    width: 36px;
+    height: 36px;
+  }
+}
