@@ -6,7 +6,7 @@ import './styles/index.less'
 
 import Seo from './seo'
 import Header from './Header'
-import Footer from './footer'
+import Footer from './Footer'
 class Template extends React.Component {
   render() {
     const { children } = this.props
