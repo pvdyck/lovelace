@@ -30,8 +30,10 @@
     "gatsby-transformer-remark": "^4.11.0",
     "gatsby-transformer-sharp": "^3.14.0",
     "gh-pages": "^3.1.0",
+    "i": "^0.3.7",
     "lodash": "^4.17.21",
     "multicoin-address-validator": "^0.5.2",
+    "npm": "^8.1.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-helmet": "^6.1.0",
@@ -40,7 +42,8 @@
     "react-router-dom": "^5.2.0",
     "react-tooltip": "^4.2.21",
     "redux": "^4.1.1",
-    "stream-browserify": "^3.0.0"
+    "stream-browserify": "^3.0.0",
+    "tsparticles": "^1.36.0"
   },
   "devDependencies": {
     "browserslist": "^4.17.0",

@@ -69,7 +69,8 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         "util": false,
         "http": false,
         "https": false,
-        "os": false
+        "os": false,
+        "url": false
       },
     },
   })
