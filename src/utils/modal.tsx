@@ -17,18 +17,21 @@ function noop() {
   return null;
 }
 
+const IS_SSR = typeof window === 'undefined'
 export function open(comp: React.ReactElement) {
-  const div = document.createElement('div');
-  document.body.appendChild(div);
-
-  ReactDOM.render(comp, div);
-
-  function close() {
-    ReactDOM.unmountComponentAtNode(div);
-    document.body.removeChild(div);
+  if (!IS_SSR) {
+    const div = document.createElement('div');
+    document.body.appendChild(div);
+  
+    ReactDOM.render(comp, div);
+  
+    function close() {
+      ReactDOM.unmountComponentAtNode(div);
+      document.body.removeChild(div);
+    }
+  
+    return close;
   }
-
-  return close;
 }
 
 interface ModalOptions extends ModalProps {
@@ -36,47 +39,49 @@ interface ModalOptions extends ModalProps {
 }
 
 export default function openModal(props: ModalOptions): ModalHandler {
-  const div = document.createElement('div');
-  document.body.appendChild(div);
+  if (!IS_SSR) {
+    const div = document.createElement('div');
+    document.body.appendChild(div);
 
-  function decProps(props: ModalProps) {
-    const { onCancel = noop, onOk = noop } = props;
+    function decProps(props: ModalProps) {
+      const { onCancel = noop, onOk = noop } = props;
 
-    props.onCancel = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
-      onCancel(e);
-      close();
-    };
-
-    props.onOk = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
-      onOk(e);
-      close();
-    };
-
-    props.visible = true;
-  }
-
-  decProps(props);
-
-  const { children, ...rest } = props;
-  ReactDOM.render(<Modal {...rest}>{children}</Modal>, div);
-
-  function close() {
-    ReactDOM.unmountComponentAtNode(div);
-    document.body.removeChild(div);
-  }
-
-  return {
-    update(_props: ModalProps) {
-      decProps(_props);
-      props = {
-        ...props,
-        ..._props,
+      props.onCancel = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
+        onCancel(e);
+        close();
       };
+
+      props.onOk = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
+        onOk(e);
+        close();
+      };
+
+      props.visible = true;
+    }
+
+    decProps(props);
+
+    const { children, ...rest } = props;
+    ReactDOM.render(<Modal {...rest}>{children}</Modal>, div);
+
+    function close() {
       ReactDOM.unmountComponentAtNode(div);
-      ReactDOM.render(<Modal {...props} />, div);
-    },
-    close,
-  };
+      document.body.removeChild(div);
+    }
+
+    return {
+      update(_props: ModalProps) {
+        decProps(_props);
+        props = {
+          ...props,
+          ..._props,
+        };
+        ReactDOM.unmountComponentAtNode(div);
+        ReactDOM.render(<Modal {...props} />, div);
+      },
+      close,
+    };
+  }
 }
 
 export function alertInstallMM() {
@@ -86,7 +91,9 @@ export function alertInstallMM() {
     okText: 'Confirm',
     cancelText: true,
     onOk() {
-      window.open('https://metamask.io/');
+      if (!IS_SSR) {
+        window.open('https://metamask.io/');
+      }
     },
   });
 }
