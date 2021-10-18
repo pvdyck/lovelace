@@ -1,7 +1,7 @@
 export const IS_SSR = typeof window === 'undefined'
 // export const IS_DEV = process.env.NODE_ENV === 'development'; // process.env.NODE_ENV === 'development';
 export const IS_DEV = false
-export const IS_ETHEREUM = typeof window.ethereum !== 'undefined'
+export const IS_ETHEREUM = !IS_SSR && typeof window.ethereum !== 'undefined'
 export const APP_NAME = 'Lovelace Launchpad'
 export const PAGE_SIZE = 20
 

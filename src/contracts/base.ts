@@ -37,15 +37,17 @@ export function getWalletType() {
   return walletType;
 }
 
-window.addEventListener(
-  'beforeunload',
-  () => {
-    if (provider) {
-      provider.disconnect();
-    }
-  },
-  false
-);
+if (typeof window !== 'undefined') {
+  window.addEventListener(
+    'beforeunload',
+    () => {
+      if (provider) {
+        provider.disconnect();
+      }
+    },
+    false
+  );
+}
 
 type Wallet = 'MM' | 'WC' | 'AK' | 'AK-GM' | 'AK-FB' | 'AK-TW';
 

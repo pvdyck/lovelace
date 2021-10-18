@@ -1,9 +1,10 @@
 import React, { useRef, useState, useEffect } from 'react';
 import images from '../assets';
 import Feature from '../components/Feature';
-import { showSuccess } from '../components/Success';
 import Layout from '../components/layout'
 import './App.less';
+import loadable from '@loadable/component';
+const success = loadable(() => import('../components/Success'))
 
 const RootIndex = () => {
   const [email, setEmail] = useState('');
@@ -34,7 +35,7 @@ const RootIndex = () => {
     )
       .then((response) => response.json())
       .then((data) => {
-        showSuccess({
+        success.showSuccess({
           text: 'You are now successfully subscribed!',
           isError: false,
         });
@@ -42,7 +43,7 @@ const RootIndex = () => {
       })
       .catch((e) => {
         console.log(e);
-        showSuccess({
+        success.showSuccess({
           text: 'Something went wrong, please try again',
           isError: true,
         });

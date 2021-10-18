@@ -3,9 +3,11 @@ import List from '../assets/svg/List.svg';
 import Close from '../assets/svg/close.svg';
 import './styles/Header.less';
 import React, { useState, useEffect } from 'react';
-import { alertInitWallet } from '../utils/modal';
 import { Link } from 'gatsby'
 
+import loadable from '@loadable/component';
+const modal = loadable(() => import('../utils/modal'))
+// import { alertInitWallet } from '../utils/modal';
 const Header = (props: any) => {
   const { address } = props;
 
@@ -102,7 +104,7 @@ const Header = (props: any) => {
           </Link>
         </div>
         <div className="getStartedContainer">
-          <div className="getStartedText" onClick={() => alertInitWallet()}>
+          <div className="getStartedText" onClick={() => modal.alertInitWallet()}>
             {connectText}
           </div>
         </div>
