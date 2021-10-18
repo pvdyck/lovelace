@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
-const Seo = ({ description = '', lang = 'en', meta = [], title, image }) => {
+const Seo = ({ description = 'Lovelace Cardano NFT Platform', lang = 'en', meta = [], title = 'Lovelace', image = 'https://i.ibb.co/ygTYZ96/logo-lovelace-icon-flat-color.png' }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
