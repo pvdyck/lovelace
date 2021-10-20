@@ -1,0 +1,80 @@
+.socialMediaGroup {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 25rem;
+
+  @media only screen and (max-width: 800px) {
+    margin-top: 2rem;
+  }
+}
+
+.socialShareIcon {
+  width: 30px;
+  height: 30px;
+  transition: all 0.15s ease-in;
+  fill: white;
+  color: white;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: inset 0px -1px 10px rgba(0, 0, 0, 0.25);
+    color: rgba(213, 0, 249, 0.8);
+    fill: rgba(213, 0, 249, 0.8);
+  }
+}
+
+.socialWrapper {
+  position: fixed;
+  top: calc(50% - 5.5rem);
+  right: 0;
+
+  .socialShareIcon {
+    padding: .3rem .5rem .3rem .3rem;
+  }
+}
+
+.chevron {
+  width: 1.5rem;
+  height: 11rem;
+  background: linear-gradient(-90deg, #500f82, transparent);
+  cursor: pointer;
+
+  &::before {
+    border-style: solid;
+    border-width: 2px 2px 0 0;
+    border-color: #fff;
+    content: '';
+    display: inline-block;
+    height: 0.6em;
+    position: relative;
+    top: calc(50% - .3rem);
+    vertical-align: top;
+    width: 0.6em;
+    left: 0.6em;
+    transform: rotate(-135deg);
+  }
+}
+
+.backgroundToggle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.open {
+  .chevron::before {
+    opacity: 0;
+  }
+  .socialMediaGroup {
+    flex-direction: column;
+    width: auto;
+    height: 11rem;
+    position: absolute;
+    z-index: 4;
+    right: 1rem;
+    top: 0;
+  }
+}
