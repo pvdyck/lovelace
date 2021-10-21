@@ -1,4 +1,4 @@
-import './styles/socialShare.less';
+import './styles/Share.less';
 import React from 'react';
 import Twitter from '../assets/svg/twitter.svg';
 import Telegram from '../assets/svg/telegram.svg';
