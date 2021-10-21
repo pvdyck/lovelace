@@ -13,7 +13,7 @@ const SocialShare = () => {
   return (
     <div className='socialMediaGroup'>
       <img
-        onClick={() => redirectTo('https://twitter.com/lovelacemaas')}
+        onClick={() => redirectTo('https://twitter.com/LovelaceWorld')}
         src={Twitter}
         className='socialShareIcon'
       />
