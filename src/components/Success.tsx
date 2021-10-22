@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import './styles/success.module.less';
+import {
+  mSuccess,
+  mError
+} from './styles/success.module.less';
 
 interface Props {
   text: string,
@@ -9,7 +12,7 @@ interface Props {
 }
 
 function Success(props: Props) {
-  const className = props.isError ? 'm-error' : 'm-success';
+  const className = props.isError ? mError : mSuccess;
 
   return (
     <div
