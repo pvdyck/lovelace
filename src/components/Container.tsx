@@ -1,8 +1,7 @@
 import React from 'react'
-import Tag from './Tags'
 
 const Container = ({ children, as = 'div' }) => {
-
+  const Tag = as
   return (
     <Tag
       style={{
