@@ -1,6 +1,10 @@
 import React from 'react';
 import WarningCircle from '../assets/svg/WarningCircle.svg';
-import './styles/ConnectWalletContainer.less';
+import {
+  connectWalletContainer,
+  connectWalletText,
+  warningIcon
+} from './styles/connect-wallet-container.module.less';
 
 const ConnectWalletContainer = (props: any) => {
   const { address, onClick } = props;
@@ -13,9 +17,9 @@ const ConnectWalletContainer = (props: any) => {
     : 'Step 1: Connect your EVM wallet';
 
   return (
-    <div className='connectWalletContainer' onClick={() => onClick()}>
-      {!address && <img src={WarningCircle} className='warningIcon' />}
-      <span className='connectWalletText'>{connectText}</span>
+    <div className={connectWalletContainer} onClick={() => onClick()}>
+      {!address && <img src={WarningCircle} className={warningIcon} />}
+      <span className={connectWalletText}>{connectText}</span>
     </div>
   );
 };

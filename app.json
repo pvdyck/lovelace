@@ -1,13 +1,12 @@
 {
-  "name": "Contentful Gatsby Starter",
-  "description": "Gatsby starter for a Contentful project.",
+  "name": "Lovelace website",
+  "description": "Lovelace Cardano NFT Platform",
   "keywords": [
-    "contentful",
-    "gatsby",
-    "static",
-    "ssg"
+    "lovelacw",
+    "cardano",
+    "nft"
   ],
-  "repository": "https://github.com/contentful-userland/gatsby-contentful-starter",
+  "repository": "https://github.com/pieer/lovelace",
   "success_url": "/",
   "buildpacks": [
     {

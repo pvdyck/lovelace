@@ -15,20 +15,20 @@ code {
 @font-face {
   font-family: 'Barlow';
   font-weight: 200;
-  src: local('Barlow'), url(../../assets/fonts/Barlow-Light.ttf) format('truetype');
+  src: local('Barlow'), url(../assets/fonts/Barlow-Light.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'Barlow';
   font-weight: normal;
   src: local('Barlow'),
-    url(../../assets/fonts/Barlow-Regular.ttf) format('truetype');
+    url(../assets/fonts/Barlow-Regular.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'Barlow';
   font-weight: bold;
-  src: local('Barlow'), url(../../assets/fonts/Barlow-Bold.ttf) format('truetype');
+  src: local('Barlow'), url(../assets/fonts/Barlow-Bold.ttf) format('truetype');
 }
 
 html {

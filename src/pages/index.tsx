@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import images from '../assets';
 import Feature from '../components/Feature';
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import './App.less';
 import loadable from '@loadable/component';
 const success = loadable(() => import('../components/Success'))

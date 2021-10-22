@@ -1,5 +1,8 @@
-import './styles/Share.less';
 import React from 'react';
+import {
+  socialMediaGroup,
+  socialShareIcon
+} from './styles/social-share.module.less';
 import Twitter from '../assets/svg/twitter.svg';
 import Telegram from '../assets/svg/telegram.svg';
 import Medium from '../assets/svg/medium.svg';
@@ -11,26 +14,26 @@ const SocialShare = () => {
   };
 
   return (
-    <div className='socialMediaGroup'>
+    <div className={socialMediaGroup}>
       <img
         onClick={() => redirectTo('https://twitter.com/LovelaceWorld')}
         src={Twitter}
-        className='socialShareIcon'
+        className={socialShareIcon}
       />
       <img
         onClick={() => redirectTo('https://t.me/lovelaceofficial')}
         src={Telegram}
-        className='socialShareIcon'
+        className={socialShareIcon}
       />
       <img
         onClick={() => redirectTo('https://lovelaceworld.medium.com/')}
         src={Medium}
-        className='socialShareIcon'
+        className={socialShareIcon}
       />
       <img
         onClick={() => redirectTo('https://discord.com/invite/6w49dSAd5M')}
         src={Discord}
-        className='socialShareIcon'
+        className={socialShareIcon}
       />
     </div>
   );

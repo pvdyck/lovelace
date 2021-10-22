@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import './styles/Success.less';
+import './styles/success.module.less';
 
 interface Props {
   text: string,

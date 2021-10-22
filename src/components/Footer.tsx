@@ -1,6 +1,9 @@
-import './styles/Footer.less';
 import React from 'react';
 import SocialShare from './SocialShare';
+import {
+  footerContainer,
+  footerRights
+} from './styles/footer.module.less';
 
 const Footer = () => {
   const redirectTo = (url: string) => {
@@ -8,8 +11,8 @@ const Footer = () => {
   };
 
   return (
-    <div className='footerContainer'>
-      <span className='footerRights'>©2021 Lovelace All rights reserved.</span>
+    <div className={footerContainer}>
+      <span className={footerRights}>©2021 Lovelace All rights reserved.</span>
       <SocialShare />
     </div>
   );

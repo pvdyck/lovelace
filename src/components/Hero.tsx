@@ -1,17 +1,23 @@
 import React from 'react'
-import { GatsbyImage } from 'gatsby-plugin-image'
 import Particles from 'react-particles-js';
+// import { GatsbyImage } from 'gatsby-plugin-image'
 
-import * as styles from './styles/Hero.less'
+import {
+  blogHero,
+  blogDetails,
+  blogTitle,
+  blogContent,
+  blogParticles,
+  tsparticles
+} from './styles/hero.module.less'
 
 // {image && (
 //   <GatsbyImage className={styles.image} alt={title} image={image} />
 // )}
-const Hero = ({ image, title, content }) => (
-  
-  <div className='blog-hero'>
-    <div className='blog-particles'>
 
+const Hero = ({ image, title, content }: any) => (
+  <div className={blogHero}>
+    <div className={blogParticles}>
       <Particles
         params={{
           detectRetina: false,
@@ -115,11 +121,11 @@ const Hero = ({ image, title, content }) => (
           }
         }} />
     </div>
-    <div className='blog-details'>
-      <h1 className='blog-title'>{title}</h1>
-      {content && <p className='blog-content'>{content}</p>}
+    <div className={blogDetails}>
+      <h1 className={blogTitle}>{title}</h1>
+      {content && <p className={blogContent}>{content}</p>}
     </div>
   </div>
 )
 
-export default Hero
+export default Hero;

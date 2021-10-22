@@ -1,10 +1,14 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
-
-import Container from './container'
-import Tags from './tags'
-import * as styles from './article-preview.module.css'
+import Container from './Container'
+import Tags from './Tags'
+import {
+  articleList,
+  link,
+  title,
+  meta
+} from './styles/article-preview.module.less'
 
 const ArticlePreview = ({ posts }) => {
   if (!posts) return null
@@ -12,20 +16,20 @@ const ArticlePreview = ({ posts }) => {
 
   return (
     <Container>
-      <ul className={styles.articleList}>
+      <ul className={articleList}>
         {posts.map((post) => {
           return (
             <li key={post.slug}>
-              <Link to={`/blog/${post.slug}`} className={styles.link}>
+              <Link to={`/blog/${post.slug}`} className={link}>
                 <GatsbyImage alt="" image={post.heroImage.gatsbyImageData} />
-                <h2 className={styles.title}>{post.title}</h2>
+                <h2 className={title}>{post.title}</h2>
               </Link>
               <div
                 dangerouslySetInnerHTML={{
                   __html: post.description.childMarkdownRemark.html,
                 }}
               />
-              <div className={styles.meta}>
+              <div className={meta}>
                 <small className="meta">{post.publishDate}</small>
                 <Tags tags={post.tags} />
               </div>

@@ -18,17 +18,16 @@
   display: inline-flex;
   align-items: center;
   flex-direction: row;
-}
+  a {
+    border-bottom: 1.5px solid transparent;
+    color: currentColor;
+    text-decoration: none;
 
-.navigationItem a {
-  border-bottom: 1.5px solid transparent;
-  color: currentColor;
-  text-decoration: none;
-}
-
-.navigationItem a:hover {
-  border-bottom-color: var(--primary);
-  color: var(--primary);
+    &:hover {
+      border-bottom-color: var(--primary);
+      color: var(--primary);
+    }
+  }
 }
 
 .logoLink {

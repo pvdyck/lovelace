@@ -100,3 +100,8 @@ pre,
 code {
   font-family: var(--font-monospace);
 }
+
+#tsparticles {
+  width: 100%;
+  height: 100%;
+}

@@ -1,12 +1,15 @@
 import React from 'react'
 
-import * as styles from './tags.module.css'
+import {
+  cTags,
+  cTag
+} from './styles/tags.module.less'
 
 const Tags = ({ tags }) =>
   tags.length > 0 && (
-    <small className={styles.tags}>
+    <small className={cTags}>
       {tags.map((tag) => (
-        <div key={tag} className={styles.tag}>
+        <div key={tag} className={cTag}>
           {tag}
         </div>
       ))}

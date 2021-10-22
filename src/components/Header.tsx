@@ -1,10 +1,19 @@
+import React, { useState, useEffect } from 'react';
+import { alertInitWallet } from '../utils/modal';
+import { Link } from 'gatsby';
 import Lovelace from '../../static/svg/lovelace.svg';
 import List from '../assets/svg/List.svg';
 import Close from '../assets/svg/close.svg';
-import './styles/Header.less';
-import React, { useState, useEffect } from 'react';
-import { alertInitWallet } from '../utils/modal';
-import { Link } from 'gatsby'
+import {
+  headerContainer,
+  headerButtonRow,
+  headerButtons,
+  lovelaceLogo,
+  menuButton,
+  getStartedContainer,
+  getStartedText,
+  open
+} from './styles/header.module.less';
 
 const Header = (props: any) => {
   const { address } = props;
@@ -89,20 +98,21 @@ const Header = (props: any) => {
     }
   }, [address]);
 
+  
   return (
-    <div className={`headerContainer ${showMenu ? 'open' : 'close'}`}>
-      <Link to="/" className='headerLogoContainer'>
-        <img src={Lovelace} className='lovelaceLogo' />
+    <div className={[headerContainer, showMenu ? open : []].join(' ')}>
+      <Link to="/">
+        <img src={Lovelace} className={lovelaceLogo} />
       </Link>
 
-      <nav role="navigation" className='headerButtonRow' aria-label="Main">
-        <div className="headerButtons">
-          <Link to="/blog/the-nft-dilemma" activeClassName="active" className="getStartedText">
+      <nav role="navigation" className={headerButtonRow} aria-label="Main">
+        <div className={headerButtons}>
+          <Link to="/blog/the-nft-dilemma" activeClassName="active" className={getStartedText} >
             Blog
           </Link>
         </div>
-        <div className="getStartedContainer">
-          <div className="getStartedText" onClick={() => alertInitWallet()}>
+        <div className={getStartedContainer}>
+          <div className={getStartedText} onClick={() => alertInitWallet()}>
             {connectText}
           </div>
         </div>
@@ -111,10 +121,10 @@ const Header = (props: any) => {
       <img
         src={showMenu ? Close : List}
         onClick={() => setShowMenu(!showMenu)}
-        className='menuButton'
+        className={menuButton}
       />
     </div>
   );
 };
 
-export default Header;
+export default Header as any;

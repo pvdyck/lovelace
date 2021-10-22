@@ -2,8 +2,8 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 
-import Layout from '../components/layout'
-import ArticlePreview from '../components/article-preview'
+import Layout from '../components/Layout'
+import ArticlePreview from '../components/ArticlePreview'
 
 class RootIndex extends React.Component {
   render() {

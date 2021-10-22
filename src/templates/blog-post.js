@@ -2,12 +2,24 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 
-import Seo from '../components/seo'
-import Layout from '../components/layout'
-import Hero from '../components/hero'
-import Tags from '../components/tags'
-import * as styles from './blog-post.module.css'
+import Seo from '../components/Seo'
+import Layout from '../components/Layout'
+import Hero from '../components/Hero'
+// import Tags from '../components/Tags'
+import {
+  articleNavigation,
+  container,
+  // meta,
+  article,
+  body
+} from './blog-post.module.css'
 
+// <span className={meta}>
+//   {post.author.name} &middot;{' '}
+//   <time dateTime={post.rawDate}>{post.publishDate}</time> –{' '}
+//   {post.body.childMarkdownRemark.timeToRead} minute read
+// </span>
+// <Tags tags={post.tags} />
 class BlogPostTemplate extends React.Component {
   render() {
     const post = get(this.props, 'data.contentfulBlogPost')
@@ -26,23 +38,17 @@ class BlogPostTemplate extends React.Component {
           title={post.title}
           content={post.description.childMarkdownRemark.excerpt}
         />
-        <div className={styles.container}>
-          <span className={styles.meta}>
-            {post.author.name} &middot;{' '}
-            <time dateTime={post.rawDate}>{post.publishDate}</time> –{' '}
-            {post.body.childMarkdownRemark.timeToRead} minute read
-          </span>
-          <div className={styles.article}>
+        <div className={container}>
+          <div className={article}>
             <div
-              className={styles.body}
+              className={body}
               dangerouslySetInnerHTML={{
                 __html: post.body.childMarkdownRemark.html,
               }}
             />
-            <Tags tags={post.tags} />
             {(previous || next) && (
               <nav>
-                <ul className={styles.articleNavigation}>
+                <ul className={articleNavigation}>
                   {previous && (
                     <li>
                       <Link to={`/blog/${previous.slug}`} rel="prev">
