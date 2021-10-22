@@ -27,11 +27,10 @@ function Success(props: Props) {
     </div>
   );
 }
-
-const div = document.createElement('div');
-document.body.appendChild(div);
-
+let div: any;
 export function showSuccess(props: Props) {
+  div = document.createElement('div');
+  document.body.appendChild(div);
   ReactDOM.render(<Success {...props} />, div);
 }
 
