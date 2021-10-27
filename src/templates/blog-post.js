@@ -25,7 +25,8 @@ class BlogPostTemplate extends React.Component {
     const post = get(this.props, 'data.contentfulBlogPost')
     const previous = get(this.props, 'data.previous')
     const next = get(this.props, 'data.next')
-
+    const svg = post.svg?.file?.url
+    console.log(post)
     return (
       <Layout location={this.props.location}>
         <Seo
@@ -35,6 +36,7 @@ class BlogPostTemplate extends React.Component {
         />
         <Hero
           image={post.heroImage.gatsbyImageData}
+          svg={svg}
           title={post.title}
           content={post.description.childMarkdownRemark.excerpt}
         />
@@ -93,6 +95,11 @@ export const pageQuery = graphql`
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, width: 1280)
         resize(height: 630, width: 1200) {
           src
+        }
+      }
+      svg {
+        file {
+          url
         }
       }
       body {

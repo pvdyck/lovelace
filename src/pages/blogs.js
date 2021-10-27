@@ -35,6 +35,11 @@ export const pageQuery = graphql`
             height: 212
           )
         }
+        svg {
+          file {
+            url
+          }
+        }
         description {
           childMarkdownRemark {
             html
