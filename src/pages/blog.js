@@ -14,7 +14,11 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location}>
         <Seo title="Blog" />
-        <Hero title="Blog" />
+        <Hero
+          title="Articles"
+          svg="/svg/lovelace-logo2.svg"
+          centered={true}
+        />
         <ArticlePreview posts={posts} />
       </Layout>
     )
@@ -25,7 +29,10 @@ export default BlogIndex
 
 export const pageQuery = graphql`
   query BlogIndexQuery {
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
+    allContentfulBlogPost(
+      sort: { fields: [publishDate],
+      order: DESC }
+    ) {
       nodes {
         title
         slug

@@ -8,14 +8,15 @@ import {
   blogImage,
   blogTitle,
   blogContent,
+  blogDetailsCenter,
   blogParticles,
-  tsparticles
+  blogParticlesCenter
 } from './styles/hero.module.less'
 
-const Hero = ({ image, svg, title, content }: any) => (
+const Hero = ({ image, svg, title, content, centered }: any) => (
   <div className={blogHero}>
     { svg ? (
-      <div className={blogParticles}>
+      <div className={[blogParticles, centered ? blogParticlesCenter : []].join(' ')}>
         <Particles
           params={{
             detectRetina: false,
@@ -115,7 +116,7 @@ const Hero = ({ image, svg, title, content }: any) => (
               inlineArrangement: "equidistant",
               scale: 2,
               type: "inline",
-              "url": "/svg/lovelace-logo2.svg",
+              url: svg || "/svg/lovelace-logo2.svg"
             }
         }} />
       </div>
@@ -125,7 +126,8 @@ const Hero = ({ image, svg, title, content }: any) => (
         </div>
       )
     }
-    <div className={blogDetails}>
+    
+    <div className={[blogDetails, centered ? blogDetailsCenter : []].join(' ')}>
       <h1 className={blogTitle}>{title}</h1>
       {content && <p className={blogContent}>{content}</p>}
     </div>

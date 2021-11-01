@@ -107,7 +107,7 @@ const Header = (props: any) => {
 
       <nav role="navigation" className={headerButtonRow} aria-label="Main">
         <div className={headerButtons}>
-          <Link to="/blog/the-nft-dilemma" activeClassName="active" className={getStartedText} >
+          <Link to="/blog" activeClassName="active" className={getStartedText} >
             Blog
           </Link>
         </div>

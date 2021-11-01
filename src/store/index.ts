@@ -40,7 +40,6 @@ export const changeChainID = (chainId: number) => {
 };
 
 export const changeAddress = (address: string) => {
-  console.log(address);
   store.dispatch(createAddressAction(address));
 };
 

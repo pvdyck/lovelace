@@ -17,10 +17,44 @@
 
 .link {
   text-decoration: none;
+  transition: all ease-out .125s;
+  display: block;
 
-  &:hover .title{
-    border-bottom-color: var(--primary);
+  &:hover {
+    transform: scale(1.03);
+    transition: all ease-in .125s;
+
+    img {
+      border: 1px solid #fff;
+    }
+
+    .title{
+      border-bottom-color: #fff;
+    }
+
   }
+}
+
+.blog-tags {
+  display: flex;
+  list-style-type: none;
+  padding-left: 0;
+  justify-content: center;
+  margin: -7rem 0 4rem 0;
+}
+
+.blog-tag {
+  background-color: #694a90;
+  padding: 0.1rem 0.3rem;
+  border-radius: .3rem;
+  margin: 0.5rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.blog-tag-active {
+  background: white;
+  color: #694a90;
 }
 
 .meta {
