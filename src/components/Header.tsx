@@ -111,11 +111,11 @@ const Header = (props: any) => {
             Blog
           </Link>
         </div>
-        <div className={getStartedContainer}>
+        {/* <div className={getStartedContainer}>
           <div className={getStartedText} onClick={() => alertInitWallet()}>
             {connectText}
           </div>
-        </div>
+        </div> */}
       </nav>
 
       <img

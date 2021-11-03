@@ -9,6 +9,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.15",
     "@loadable/component": "^5.15.0",
+    "@react-spring/web": "^9.3.0",
     "@svgr/webpack": "^5.5.0",
     "@types/react-infinite-scroller": "^1.2.1",
     "@walletconnect/web3-provider": "^1.2.2",
@@ -43,6 +44,7 @@
     "react-router-dom": "^5.2.0",
     "react-tooltip": "^4.2.21",
     "redux": "^4.1.1",
+    "sine-waves": "^0.3.0",
     "stream-browserify": "^3.0.0",
     "tsparticles": "^1.36.0"
   },

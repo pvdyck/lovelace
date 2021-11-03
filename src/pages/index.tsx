@@ -1,8 +1,10 @@
 import React, { useRef, useState, useEffect } from 'react';
 import images from '../assets';
-import Feature from '../components/Feature';
+import Waves from '../components/Waves';
+import Features from '../components/Features';
 import Layout from '../components/Layout'
 import {showSuccess} from '../components/Success';
+import Particles from 'react-particles-js';
 import './App.less';
 
 const RootIndex = () => {
@@ -54,15 +56,15 @@ const RootIndex = () => {
     <Layout>
       <div className='landingContainer'>
         <div className='landingTextContainer'>
-          <h1 className='landingBoldText'>DeFi-Enabled NFT Marketplace</h1>
-          <div className='centeredRow centeredCol'>
-            <h2 className='landingLightText'>For Cardano</h2>
+          <h1 className='landingBoldText'>Realize the Potential of the Metaverse</h1>
+          {/* <div className='centeredRow centeredCol'>
+            <h2 className='landingLightText'>We help builders build and players play in the metaverse</h2>
             <img
               className='cardanoLogo'
               src={images.CardanoSVG}
               alt='Cardano'
             />{' '}
-          </div>
+          </div> */}
 
           <div className='signUpButtonContainer'>
             <input
@@ -74,7 +76,7 @@ const RootIndex = () => {
               placeholder='Enter your email address'
             />
             <div
-              className='signUpButton'
+              className='button'
               onClick={() => onSignUp()}
             >
               <p className='connectWalletTextLanding'>Sign Up</p>
@@ -94,27 +96,61 @@ const RootIndex = () => {
       </div>
       <div className='featureWalletRefrence'/>
       <div className='featuresContainer'>
+        <Waves />
+        <h2 className='landingLightText'>
+          We help builders build and players play in the metaverse
+        </h2>
+      </div>
+      <div className='featuresContainer'>
         <p className='featuresTitleText'>
-          Lovelace enables users to create, find, finance, trade and use
-          DeFi-enabled NFTs across chains, games and metaverses
+        Develop or participate in NFT experiences, play-to-earn games, digital economies and worlds across Cardano and other chains using our Metaverse-as-a-Service toolkit:
         </p>
-        <div className='featuresBoxContainer'>
-          <Feature
-            Icon={images.Trade}
-            text='Trade and stake NFTs for good stuff'
-          />
-          <Feature
-            Icon={images.Experience}
-            text='Discover original NFT experiences'
-          />
-          <Feature
-            Icon={images.Games}
-            text='Crowdfund your  game on Launchpad'
-          />
-          <Feature
-            Icon={images.Integrate}
-            text='Earn bonuses in partner games & metaverses'
-          />
+        <Features />
+      </div>
+      <div className='referFriend'>
+        <h2 className='landingLightText'>
+          Refer Friends
+        </h2>
+        <p className='featuresTitleText'>
+        Earn rewards and gain access to special NFT drops by signing up and referring your friends
+        </p>
+        <a href="https://upvir.al/123461/lp123461" target="_blank"
+          className='button'
+        >
+          <span className='connectWalletTextLanding'>Refer</span>
+        </a>
+      </div>
+
+      <div className='tokenSale'>
+        <h2 className='landingLightText'>
+          TOKEN SALE
+        </h2>
+        <div className='tokenSaleContainer'>
+          <div className='tokenSaleTextContainer'>
+            <p className='tokenSaleTitleText'>
+            $LACE Token is your ticket to the Metaverse
+            </p>
+            <p className='tokenSaleTitleText'>
+            Purchase $LACE tokens to benefit from the following:
+            </p>
+            <div className='simple-frature-box-container'>
+              <div className='simple-feature-container'>
+                <div className='simple-feature-text-container'>Discounts on NFTs and transaction fees</div>
+              </div>
+              <div className='simple-feature-container'>
+                <div className='simple-feature-text-container'>Access to IDO and INO launchpad</div>
+              </div>
+              <div className='simple-feature-container'>
+                <div className='simple-feature-text-container'>Play to Earn game transactions</div>
+              </div>
+              <div className='simple-feature-container'>
+                <div className='simple-feature-text-container'>Native staking</div>
+              </div>
+              <div className='simple-feature-container'>
+                <div className='simple-feature-text-container'>Governance</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       {/* <div className='connectWalletRefrence' ref={connectWalletRef} /> */}

@@ -11,6 +11,13 @@ import Games from './svg/games.svg';
 import Integrate from './svg/integrate.svg';
 import Question from './svg/Question.svg';
 
+import Cardano2 from './svg/cardano2.svg';
+import LaunchPad from './svg/launch-pad.svg';
+import Nft from './svg/nft.svg';
+import PlayToEarn from './svg/play-to-earn.svg';
+import SmartContract from './svg/smart-contract.svg';
+import Partners from './svg/Partners.svg';
+
 export default {
   Twitter,
   Telegram,
@@ -24,4 +31,10 @@ export default {
   Alonzo,
   Cardano,
   CardanoSVG,
+  Cardano2,
+  LaunchPad,
+  Nft,
+  PlayToEarn,
+  SmartContract,
+  Partners
 };
