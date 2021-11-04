@@ -65,7 +65,7 @@ const ArticlePreview = ({ posts }:any) => {
               />
               <div className={meta}>
                 <small className="meta">{post.publishDate}</small>
-                <Tags tags={post.tags} />
+                <Tags tags={[post.tags[0]]} />
               </div>
             </li>
           )
