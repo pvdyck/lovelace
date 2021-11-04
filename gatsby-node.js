@@ -54,7 +54,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
 const webpack = require("webpack");
 
-exports.onCreateWebpackConfig = ({ actions }) => {
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+  if (stage === "build-html" || stage === "develop-html") {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /sine-waves/,
+            use: loaders.null(),
+          },
+        ],
+      },
+    })
+  }
   actions.setWebpackConfig({
     plugins: [
       new webpack.ProvidePlugin({
