@@ -62,14 +62,14 @@ const createWave = (el:HTMLCanvasElement) => {
       {
         timeModifier: 0.5,
         lineWidth: 1,
-        amplitude: -200,
-        wavelength: 200
+        amplitude: -150,
+        wavelength: 150
       },
       {
         timeModifier: 0.25,
         lineWidth: 2,
-        amplitude: -200,
-        wavelength: 200
+        amplitude: -150,
+        wavelength: 150
       }
     ],
 
