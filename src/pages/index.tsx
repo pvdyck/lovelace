@@ -107,7 +107,7 @@ const RootIndex = () => {
         </p>
         <Features />
       </div>
-      <div className='referFriend'>
+      {/* <div className='referFriend'>
         <h2 className='landingLightText'>
           Refer Friends
         </h2>
@@ -119,7 +119,7 @@ const RootIndex = () => {
         >
           <span className='connectWalletTextLanding'>Refer</span>
         </a>
-      </div>
+      </div> */}
 
       <div className='tokenSale'>
         <h2 className='landingLightText'>
