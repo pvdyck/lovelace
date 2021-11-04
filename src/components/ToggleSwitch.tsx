@@ -9,7 +9,6 @@ import {
 } from './styles/toggle-switch.module.less';
 
 const ToggleSwitch = ({name, checked, onChange}) => {
-  console.log(name, onChange)
   return (
     <div className={toggleSwitch}>
       <input
