@@ -16,7 +16,7 @@ import LaunchPad from './svg/launch-pad.svg';
 import Nft from './svg/nft.svg';
 import PlayToEarn from './svg/play-to-earn.svg';
 import SmartContract from './svg/smart-contract.svg';
-import Partners from './svg/Partners.svg';
+import Partners from './svg/partners.svg';
 
 export default {
   Twitter,
