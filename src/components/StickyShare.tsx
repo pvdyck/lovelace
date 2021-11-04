@@ -3,28 +3,13 @@ import SocialShare from "./SocialShare";
 import Share from '../assets/svg/share.svg';
 import {
   socialWrapper,
-  backgroundToggle,
-  chevron,
-  open
+  chevron
 } from "./styles/social-share.module.less"
 
-const StickyShare = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  
+const StickyShare = () => {  
   return (
-    <div className={[socialWrapper, isOpen ? open : []].join(' ')}
-      >
-        {isOpen && (
-          <div className={backgroundToggle} onClick={() => setIsOpen(!isOpen)}></div>
-        )}
-      <div
-        onClick={() => setIsOpen(!isOpen)}
-        className={chevron}
-      >
-        {isOpen && (
-          <SocialShare />
-        )}
-      </div>
+    <div className={socialWrapper}>
+      <SocialShare />
     </div>
   );
 }
