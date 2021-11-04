@@ -127,7 +127,7 @@ const RootIndex = () => {
         </h2>
         <div className='tokenSaleContainer'>
           <div className='tokenSaleTextContainer'>
-            <p className='tokenSaleTitleText'>
+            <p className='tokenSaleSubtitleText'>
             $LACE Token is your ticket to the Metaverse
             </p>
             <p className='tokenSaleTitleText'>

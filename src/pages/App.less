@@ -1,5 +1,6 @@
 .App {
-  background-image: url(../assets/images/background.png);
+  // background-image: url(../assets/images/background.png);
+  background-image: linear-gradient(to right, #600771 0%, #000002 66%, #2f1b5d 100%);
   background-size: cover;
   background-repeat: no-repeat;
   @media only screen and (max-width: 800px) {
@@ -605,11 +606,21 @@
   }
 }
 
+.tokenSaleSubtitleText {
+  text-align: center;
+  font-size: 1.5rem;
+  background: linear-gradient(90deg, #d500f9 0%, #651fff 100%);
+}
+
 .simple-frature-box-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 4rem;
+
+  @media only screen and (max-width: 1000px) {
+    margin-top: 0;
+  }
 }
 
 .simple-feature-container {
@@ -640,12 +651,12 @@
   }
   @media only screen and (max-width: 800px) {
     padding: 16px;
-    height: 208px;
+    // height: 208px;
     width: 164px;
   }
   @media only screen and (max-width: 380px) {
     padding: 8px;
-    height: 160px;
+    // height: 160px;
     width: 100%;
   }
 }
