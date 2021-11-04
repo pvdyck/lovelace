@@ -3,7 +3,6 @@ import SineWaves from 'sine-waves'
 import { wave } from './styles/waves.module.less'
 
 const createWave = (el:HTMLCanvasElement) => {
-  console.log(el.width)
   const waves = new SineWaves({
     // Canvas Element
     el: el,
