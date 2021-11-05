@@ -5,17 +5,25 @@
   @media only screen and (min-width: 900px) {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 4rem;
   }
 }
 
 .feature-container {
   margin: 1rem auto;
   display: flex;
+  margin-top: 2rem;
+  align-items: stretch;
+  flex-direction: column;
+  text-align: center;
   
   @media only screen and (min-width: 900px) {
     max-width: calc(50%);
     width: 50%;
     margin: 8rem 0 0rem 0;
+    flex-direction: row;
+    align-items: start;
+    text-align: left;
 
     &:nth-child(odd) {
       flex-direction: row-reverse;
@@ -38,9 +46,6 @@
   @media only screen and (max-width: 800px) {
     font-size: 18px;
   }
-  @media only screen and (max-width: 380px) {
-    font-size: 16px;
-  }
 }
 
 .feature-logo {
@@ -51,19 +56,24 @@
   padding: .5rem;
   box-sizing: content-box;
   border-color: #d402f8;
-  margin-right: 2rem;
+  background: #d402f8;
+  align-self: center;
+  margin-bottom: 1rem;
+  
   @media only screen and (min-width: 900px) {
+    background: transparent;
+    margin-right: 2rem;
     min-width: 60px;
     height: 60px;
     margin: 0 3rem 0 2rem;
     padding: 1rem;
+    align-self: start;
   }
 }
 
 .feature-description {
   background: linear-gradient(90deg, rgb(213, 0, 249) 0%, rgb(101, 31, 255) 100%);
   padding: 0.3rem 0.5rem;
-  display: inline-block;
   border-radius: 0.2rem;
   margin-top: .5rem;
 }

@@ -3,8 +3,9 @@ import images from '../assets';
 import Waves from '../components/Waves';
 import Features from '../components/Features';
 import Layout from '../components/Layout'
-import {showSuccess} from '../components/Success';
-import Particles from 'react-particles-js';
+import { showSuccess } from '../components/Success';
+import ScrollDown from '../components/ScrollDown';
+// import Particles from 'react-particles-js';
 import './App.less';
 
 const RootIndex = () => {
@@ -91,10 +92,11 @@ const RootIndex = () => {
           >
             {emailError}
           </div>
+          <ScrollDown scrollTo='scrollTo'/>
         </div>
         <img className='alonzo' src={images.Alonzo} alt='alonzo' />
       </div>
-      <div className='featureWalletRefrence'/>
+      <div id='scrollTo' className='featureWalletRefrence'/>
       <div className='featuresContainer'>
         <Waves />
         <h2 className='landingLightText'>

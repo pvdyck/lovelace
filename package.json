@@ -42,6 +42,7 @@
     "react-particles-js": "^3.5.3",
     "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",
+    "react-scroll": "^1.8.4",
     "react-tooltip": "^4.2.21",
     "redux": "^4.1.1",
     "sine-waves": "^0.3.0",

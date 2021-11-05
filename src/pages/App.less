@@ -1,10 +1,13 @@
 .App {
   // background-image: url(../assets/images/background.png);
-  background-image: linear-gradient(to right, #600771 0%, #000002 66%, #2f1b5d 100%);
+  // background-image: linear-gradient(to right, #600771 0%, #000002 66%, #2f1b5d 100%);
+  background-image: repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f708 10px), linear-gradient(to right, rgb(96, 7, 113) 0%, rgb(0, 0, 2) 66%, rgb(47, 27, 93) 100%);
   background-size: cover;
   background-repeat: no-repeat;
   @media only screen and (max-width: 800px) {
-    background-image: url(../assets/images/backgroundMobile.png);
+    // background-image: url(../assets/images/backgroundMobile.png);
+    // background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #e5e5f708 10px), linear-gradient(to right, #600771 0%, #2f1b5d 100%);
+    background-image: repeating-radial-gradient(circle at 50% 0, transparent 0, #e5e5f708 10px), linear-gradient(103deg, #600771 -21%, #000002 50%, #000002 60%, #2f1b5d 121%);
   }
 
   h1, h2 , h3, h4, p {
@@ -38,11 +41,12 @@
         align-items: center;
       }
       @media only screen and (max-width: 800px) {
-        margin-top: 25px;
+        margin-top: 0;
       }
 
       .landingTextContainer {
         margin-top: 0px;
+        position: relative;
 
         @media only screen and (max-width: 1000px) {
           text-align: center;
@@ -52,7 +56,7 @@
         .button {
           @media only screen and (max-width: 600px) {
             height: 40px;
-            width: 50px;
+            width: 46px;
             padding: 0 1rem;
           }
         }
@@ -169,6 +173,9 @@
 
       .alonzo {
         width: 30%;
+        filter: drop-shadow(5px 5px 50px #222);
+        filter: drop-shadow(5px 5px 100px #26072C);
+
         @media only screen and (min-width: 2000px) {
           width: 500px;
         }
@@ -248,16 +255,21 @@
       font-size: 54px;
       color: white;
       margin: 10px 0 3rem 0;
+      line-height: 5rem;
 
       @media only screen and (max-width: 1400px) {
         font-size: 44px;
+        line-height: 4rem;
       }
       @media only screen and (max-width: 1200px) {
         font-size: 38px;
+        line-height: 3rem;
       }
       @media only screen and (max-width: 800px) {
         font-size: 28px;
+        line-height: 2.5rem;
         padding: 0.5rem;
+        margin-bottom: 2rem;
       }
     }
 
@@ -322,6 +334,7 @@
           text-align: center;
           color: white;
           margin: 0;
+
           &.bold {
             margin: 0 10px 0 10px;
             font-weight: 700;
