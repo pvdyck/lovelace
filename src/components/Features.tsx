@@ -7,8 +7,7 @@ import {
   featureContainer,
   featureTitleContainer,
   featureDescription,
-  // featureTextContainer,
-  // featureContentContainer,
+  featuresBoxContainerAltern,
   featureLogo
 } from './styles/feature.module.less';
 
@@ -54,7 +53,7 @@ const Feature = (props: any) => {
   return (
     <div>
       <ToggleSwitch name='newsletter' checked={ isCreator } onChange={ onCreatorChange }/>
-      <div className={featuresBoxContainer}>
+      <div className={[featuresBoxContainer, isCreator ? featuresBoxContainerAltern : '' ].join(' ')}>
         { features.map((feature:any) => {
           return (
             <div className={featureContainer} key={feature.title}>
