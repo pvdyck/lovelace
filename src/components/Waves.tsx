@@ -8,7 +8,7 @@ const createWave = (el:HTMLCanvasElement) => {
     el: el,
 
     width: document.documentElement.clientWidth,
-    height: el.height,
+    height: el.height * 2,
 
     // General speed of entire wave system
     speed: 3,

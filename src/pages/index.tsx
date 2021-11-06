@@ -4,7 +4,7 @@ import Waves from '../components/Waves';
 import Features from '../components/Features';
 import Layout from '../components/Layout'
 import { showSuccess } from '../components/Success';
-import ScrollDown from '../components/ScrollDown';
+// import ScrollDown from '../components/ScrollDown';
 // import Particles from 'react-particles-js';
 import './App.less';
 
@@ -92,7 +92,7 @@ const RootIndex = () => {
           >
             {emailError}
           </div>
-          <ScrollDown scrollTo='scrollTo'/>
+          {/* <ScrollDown scrollTo='scrollTo'/> */}
         </div>
         <img className='alonzo' src={images.Alonzo} alt='alonzo' />
       </div>
@@ -152,6 +152,68 @@ const RootIndex = () => {
                 <div className='simple-feature-text-container'>Governance</div>
               </div>
             </div>
+
+            {/* <h3 className='tokenSaleSubtitleText'>
+              How to Buy $LACE
+            </h3>
+
+            <div>
+              <strong>Token Ticker:</strong>	LACE
+            </div>
+            <div>
+              <h4>LACE Contract Addresses:</h4>
+              <div>
+                <strong>Token Ticker:</strong>	LACE
+              </div>
+              <div>
+                <strong>ETH:</strong>
+              </div>
+              <div>
+                <strong>BSC:</strong>
+              </div>
+            </div>
+            <div>
+              <h4>Exchanges:</h4>
+              <div>
+                <strong>Uniswap:</strong>
+              </div>
+              <div>
+                <strong>Pancakeswap:</strong>
+              </div>
+            </div>
+            <div>
+              <h4>Token Listing Information:</h4>
+              <div>
+                <a href='https://coinmarketcap.com/currencies/lovelace/' target='_blank'>CoinMarketCap</a>
+              </div>
+              <div>
+                <strong>CoinGecko:</strong>
+              </div>
+            </div>
+
+            <h3 className='tokenSaleSubtitleText'>
+              Token Supply and Distribution
+            </h3>
+            <div>
+              <h4>Token Listing Information:</h4>
+              <div>
+                <strong>Supply:</strong> 250,000,000
+              </div>
+              <div>
+                <strong>Circulating Supply:</strong>
+                <ul>
+                  <li>
+                    <strong>Initial:</strong>
+                  </li>
+                  <li>
+                    <strong>After 6 months:</strong>
+                  </li>
+                  <li>
+                    <strong>After 12 months:</strong>
+                  </li>
+                </ul>
+              </div>
+            </div> */}
           </div>
         </div>
       </div>
