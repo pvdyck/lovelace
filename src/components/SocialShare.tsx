@@ -7,6 +7,7 @@ import Twitter from '../assets/svg/twitter.svg';
 import Telegram from '../assets/svg/telegram.svg';
 import Medium from '../assets/svg/medium.svg';
 import Discord from '../assets/svg/discord.svg';
+import Gitbook from '../assets/svg/gitbook.svg';
 
 const SocialShare = () => {
   const redirectTo = (url: string) => {
@@ -33,6 +34,11 @@ const SocialShare = () => {
       <img
         onClick={() => redirectTo('https://discord.com/invite/6w49dSAd5M')}
         src={Discord}
+        className={socialShareIcon}
+      />
+      <img
+        onClick={() => redirectTo('http://docs.lovelace.world/')}
+        src={Gitbook}
         className={socialShareIcon}
       />
     </div>
