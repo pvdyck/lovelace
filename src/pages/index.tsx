@@ -193,13 +193,13 @@ const RootIndex = () => {
               How to Buy $LACE
             </h3>
 
-            <div class="tokenSaleWrapper">
-              <div class="tokenSaleElement">
+            <div className="tokenSaleWrapper">
+              <div className="tokenSaleElement">
                 <div>
                   <strong>Token Ticker:</strong>	LACE
                 </div>
                 </div>
-              <div class="tokenSaleElement">
+              <div className="tokenSaleElement">
                 <h4>LACE Contract Addresses:</h4>
                 <div>
                   <strong>ETH:</strong> Coming soon
@@ -208,7 +208,7 @@ const RootIndex = () => {
                   <strong>BSC:</strong> Coming soon
                 </div>
               </div>
-              <div class="tokenSaleElement">
+              <div className="tokenSaleElement">
                 <h4>Exchanges:</h4>
                 <div>
                   <strong>Uniswap:</strong> Coming soon
@@ -217,7 +217,7 @@ const RootIndex = () => {
                   <strong>Pancakeswap:</strong> Coming soon
                 </div>
               </div>
-              <div class="tokenSaleElement">
+              <div className="tokenSaleElement">
                 <h4>Token Listing Information:</h4>
                 <div>
                   <strong>CoinMarketCap: </strong><a href='https://coinmarketcap.com/currencies/lovelace/' target='_blank'>https://coinmarketcap.com/currencies/lovelace/</a>
@@ -228,7 +228,7 @@ const RootIndex = () => {
               </div>
             </div>
 
-            {/* <div class="tokenSaleWrapper">
+            {/* <div className="tokenSaleWrapper">
               <div>
                 <strong>Circulating Supply:</strong>
                 <ul>
@@ -244,11 +244,11 @@ const RootIndex = () => {
                 </ul>
               </div>
             </div> */}
-            <div class="tokenDistributionWrapper">
+            <div className="tokenDistributionWrapper">
               <h2 className='landingLightText'>
                 TOKEN Distribution
               </h2>
-              <div class="tokenSaleElement">
+              <div className="tokenSaleElement">
                 <h4>Token Listing Information:</h4>
                 <div>
                   <strong>Supply:</strong> 250,000,000
