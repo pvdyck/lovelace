@@ -4,8 +4,8 @@ import Waves from '../components/Waves';
 import Features from '../components/Features';
 import Layout from '../components/Layout'
 import { showSuccess } from '../components/Success';
-// import ScrollDown from '../components/ScrollDown';
-// import Particles from 'react-particles-js';
+import DistributionChart from '../components/DistributionChart';
+import Particles from 'react-particles-js';
 import './App.less';
 
 const RootIndex = () => {
@@ -125,6 +125,42 @@ const RootIndex = () => {
 
       <div className='tokenSale'>
         <h2 className='landingLightText'>
+          Development Roadmap
+        </h2>
+        <div className="timeline">
+          <div className="cards">
+            <div className="card">
+              <h4>$LACE fungible token</h4>
+            </div>
+            <div className="card">
+              <h4>Lovelink, Ethereum-Cardano connector, allowing for cross-chain rewards</h4>
+            </div>
+            <div className="card">
+              <h4>Adanimals NFT release on EVM, with connected rewards on Cardano</h4>
+            </div>
+            <div className="card">
+              <h4>Adanimals P2E ecosystem token</h4>
+            </div>
+            <div className="card">
+              <h4>Lovelace Marketplace</h4>
+            </div>
+            <div className="card">
+              <h4>NFT Creator Toolkit smart contracts</h4>
+            </div>
+            <div className="card">
+              <h4>Adanimals P2E game</h4>
+            </div>
+            <div className="card">
+              <h4>Launch of NFT and GameFi projects from Lovelace Launchpads</h4>
+            </div>
+            <div className="card">
+              <h4>Deploy Lovelace NFT smart contracts and marketplace on Cardano</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='tokenSale'>
+        <h2 className='landingLightText'>
           TOKEN SALE
         </h2>
         <div className='tokenSaleContainer'>
@@ -153,52 +189,46 @@ const RootIndex = () => {
               </div>
             </div>
 
-            {/* <h3 className='tokenSaleSubtitleText'>
+            <h3 className='tokenSaleSubtitleText'>
               How to Buy $LACE
             </h3>
 
-            <div>
-              <strong>Token Ticker:</strong>	LACE
-            </div>
-            <div>
-              <h4>LACE Contract Addresses:</h4>
-              <div>
-                <strong>Token Ticker:</strong>	LACE
+            <div class="tokenSaleWrapper">
+              <div class="tokenSaleElement">
+                <div>
+                  <strong>Token Ticker:</strong>	LACE
+                </div>
+                </div>
+              <div class="tokenSaleElement">
+                <h4>LACE Contract Addresses:</h4>
+                <div>
+                  <strong>ETH:</strong> Coming soon
+                </div>
+                <div>
+                  <strong>BSC:</strong> Coming soon
+                </div>
               </div>
-              <div>
-                <strong>ETH:</strong>
+              <div class="tokenSaleElement">
+                <h4>Exchanges:</h4>
+                <div>
+                  <strong>Uniswap:</strong> Coming soon
+                </div>
+                <div>
+                  <strong>Pancakeswap:</strong> Coming soon
+                </div>
               </div>
-              <div>
-                <strong>BSC:</strong>
-              </div>
-            </div>
-            <div>
-              <h4>Exchanges:</h4>
-              <div>
-                <strong>Uniswap:</strong>
-              </div>
-              <div>
-                <strong>Pancakeswap:</strong>
-              </div>
-            </div>
-            <div>
-              <h4>Token Listing Information:</h4>
-              <div>
-                <a href='https://coinmarketcap.com/currencies/lovelace/' target='_blank'>CoinMarketCap</a>
-              </div>
-              <div>
-                <strong>CoinGecko:</strong>
+              <div class="tokenSaleElement">
+                <h4>Token Listing Information:</h4>
+                <div>
+                  <strong>CoinMarketCap: </strong><a href='https://coinmarketcap.com/currencies/lovelace/' target='_blank'>https://coinmarketcap.com/currencies/lovelace/</a>
+                </div>
+                <div>
+                  <strong>CoinGecko:</strong> Coming soon
+                </div>
               </div>
             </div>
 
-            <h3 className='tokenSaleSubtitleText'>
-              Token Supply and Distribution
-            </h3>
-            <div>
-              <h4>Token Listing Information:</h4>
-              <div>
-                <strong>Supply:</strong> 250,000,000
-              </div>
+            {/* <div class="tokenSaleWrapper">
               <div>
                 <strong>Circulating Supply:</strong>
                 <ul>
@@ -214,6 +244,122 @@ const RootIndex = () => {
                 </ul>
               </div>
             </div> */}
+            <div class="tokenDistributionWrapper">
+              <h2 className='landingLightText'>
+                TOKEN Distribution
+              </h2>
+              <div class="tokenSaleElement">
+                <h4>Token Listing Information:</h4>
+                <div>
+                  <strong>Supply:</strong> 250,000,000
+                </div>
+              </div>
+              <div className='particleWrapper'>
+                <Particles
+                  params={{
+                    detectRetina: false,
+                    fpsLimit: 60,
+                    interactivity: {
+                      detectsOn: "canvas",
+                      events: {
+                        onHover: {
+                          enable: true,
+                          mode: ["connect"]
+                        },
+                        resize: true
+                      },
+                      modes: {
+                        connect: {
+                          distance: 25,
+                          radius: 50,
+                          link: 30
+                        }
+                      }
+                    },
+                    particles: {
+                      color: {
+                        value: "#dd9cf4",
+                        animation: {
+                          enable: false,
+                          speed: 20,
+                          sync: true
+                        }
+                      },
+                      lineLinked: {
+                        blink: false,
+                        color: "#500F82",
+                        consent: false,
+                        distance: 30,
+                        enable: true,
+                        opacity: 1,
+                        width: 1
+                      },
+                      move: {
+                        attract: {
+                          enable: false,
+                          rotate: {
+                            x: 600,
+                            y: 1200
+                          }
+                        },
+                        bounce: false,
+                        direction: "none",
+                        enable: true,
+                        outMode: "bounce",
+                        random: true,
+                        speed: 0.5,
+                        straight: false
+                      },
+                      number: {
+                        density: {
+                          enable: false,
+                          area: 2000
+                        },
+                        limit: 0,
+                        value: 200
+                      },
+                      opacity: {
+                        animation: {
+                          enable: true,
+                          minimumValue: 0.05,
+                          speed: 2,
+                          sync: false
+                        },
+                        random: false,
+                        value: 1
+                      },
+                      shape: {
+                        type: "circle"
+                      },
+                      size: {
+                        animation: {
+                          enable: false,
+                          minimumValue: 0.1,
+                          speed: 40,
+                          sync: false
+                        },
+                        random: true,
+                        value: 1
+                      }
+                    },
+                    polygon: {
+                      draw: {
+                        enable: true,
+                        lineColor: "#dd9cf4",
+                        lineWidth: 0.8
+                      },
+                      move: {
+                        radius: 100
+                      },
+                      inlineArrangement: "equidistant",
+                      scale: 2,
+                      type: "inline",
+                      url: "/svg/lovelace-logo2.svg"
+                    }
+                }} />
+              </div>
+              <DistributionChart />
+            </div>
           </div>
         </div>
       </div>

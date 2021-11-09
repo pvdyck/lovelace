@@ -35,6 +35,7 @@
       flex-direction: row;
       margin-top: 100px;
       padding-top: 100px;
+      justify-content: space-between;
 
       @media only screen and (max-width: 1000px) {
         flex-direction: column;
@@ -47,6 +48,10 @@
       .landingTextContainer {
         margin-top: 0px;
         position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 38rem;
 
         @media only screen and (max-width: 1000px) {
           text-align: center;
@@ -681,7 +686,7 @@
     margin: 1rem;
     width: 164px;
   }
-  @media only screen and (max-width: 380px) {
+  @media only screen and (max-width: 600px) {
     padding: .5rem;
     width: 100%;
   }
@@ -699,5 +704,145 @@
   }
   @media only screen and (max-width: 380px) {
     font-size: 16px;
+  }
+}
+
+
+
+.tokenSaleWrapper {
+  background: linear-gradient(90deg, rgba(213, 0, 249, 0.2), rgba(101, 31, 255, 0.2));
+  border: 1px solid rgba(213, 1, 248, 0.3);
+  border-radius: 2rem;
+}
+
+.tokenSaleElement {
+  padding: 1rem;
+  margin: 1rem;
+  min-width: 33%;
+  border-radius: 0.5rem;
+
+  @media only screen and (max-width: 800px) {
+    padding: 1rem 0;
+  }
+
+  h4 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    margin-left: -.5rem;
+    color: #d402f8;
+    padding: .3rem .5rem;
+    font-weight: bold;
+
+    @media only screen and (max-width: 800px) {
+      margin: 0 0 0.5rem 0;
+    }
+  }
+
+  div {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: space-between;
+    max-width: 22rem;
+
+    strong {
+      margin-right: 5.7rem;
+    }
+
+    
+    @media only screen and (max-width: 800px) {
+      flex-direction: column;
+      
+      a {
+        overflow-wrap: anywhere;
+      }
+      strong {
+        margin-right: 0;
+        margin-top: .5rem;
+      }
+    }
+  }
+}
+
+.tokenDistributionWrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .tokenSaleElement {
+    align-self: center;
+    text-align: center;
+  }
+}
+
+
+.timeline {
+  margin-top: 4rem;
+  width:100%;
+  display:flex;
+  justify-content: center;
+  position: relative;
+
+  @media only screen and (max-width: 800px) {
+    margin-top: 2rem;
+  }
+
+  
+  .cards {
+    // position: relative;
+    // &:before {
+    //   content: '';
+    //   position: absolute;
+    //   width: 1px;
+    //   height: calc(100% - 8rem);
+    //   background-color: #FFF;
+    //   left: 1rem;
+    //   top: 4rem;
+    // }
+
+    .card {
+      padding: 1rem;
+      background: linear-gradient(90deg, rgba(213, 0, 249, 0.2), rgba(101, 31, 255, 0.2));
+      border: 1px solid rgba(213, 1, 248, 0.3);
+      border-radius: 10px;
+      margin: 1rem auto;
+      counter-increment: number;
+      position: relative;
+      padding-left: 3rem;
+
+      &::before {
+        position: absolute;
+        // left: -3rem;
+        left: 1rem;
+        top: 50%;
+        margin-top: -1rem;
+        content: counter(number)" ";
+        width: 2rem;
+        height: 2rem;
+        background: #D1D6E6;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #2c1a52;
+        font-weight: bold;
+      }
+
+      h4 {
+        margin: 1rem;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.particleWrapper {
+  position: absolute;
+  top: 22rem;
+  height: 100vh;
+  width: 100%;
+
+  @media only screen and (max-width: 800px) {
+    display: none;
   }
 }
