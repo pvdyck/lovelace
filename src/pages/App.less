@@ -742,13 +742,17 @@
   }
 
   div {
-    display: flex;
-    flex-direction: row;
-    align-content: space-between;
-    justify-content: space-between;
+    // display: flex;
+    // flex-direction: row;
+    // align-content: space-between;
+    // justify-content: space-between;
+    strong {
+      width: 17rem;
+      display: inline-block;
+    }
     
     @media only screen and (max-width: 800px) {
-      flex-direction: column;
+      // flex-direction: column;
       
       a {
         overflow-wrap: anywhere;
@@ -756,6 +760,7 @@
       strong {
         margin-right: 0;
         margin-top: .5rem;
+        display: inline;
       }
     }
   }
