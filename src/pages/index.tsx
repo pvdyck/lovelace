@@ -249,7 +249,6 @@ const RootIndex = () => {
                 TOKEN Distribution
               </h2>
               <div className="tokenSaleElement">
-                <h4>Token Listing Information:</h4>
                 <div>
                   <strong>Supply:</strong> 250,000,000
                 </div>
