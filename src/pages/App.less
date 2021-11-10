@@ -713,16 +713,19 @@
   background: linear-gradient(90deg, rgba(213, 0, 249, 0.2), rgba(101, 31, 255, 0.2));
   border: 1px solid rgba(213, 1, 248, 0.3);
   border-radius: 2rem;
+  display: grid;
+  justify-items: center;
+  align-items: center;
 }
 
 .tokenSaleElement {
   padding: 1rem;
   margin: 1rem;
-  min-width: 33%;
-  border-radius: 0.5rem;
+  width: 30rem;
 
   @media only screen and (max-width: 800px) {
     padding: 1rem 0;
+    width: auto;
   }
 
   h4 {
@@ -743,12 +746,6 @@
     flex-direction: row;
     align-content: space-between;
     justify-content: space-between;
-    max-width: 22rem;
-
-    strong {
-      margin-right: 5.7rem;
-    }
-
     
     @media only screen and (max-width: 800px) {
       flex-direction: column;
@@ -789,17 +786,6 @@
 
   
   .cards {
-    // position: relative;
-    // &:before {
-    //   content: '';
-    //   position: absolute;
-    //   width: 1px;
-    //   height: calc(100% - 8rem);
-    //   background-color: #FFF;
-    //   left: 1rem;
-    //   top: 4rem;
-    // }
-
     .card {
       padding: 1rem;
       background: linear-gradient(90deg, rgba(213, 0, 249, 0.2), rgba(101, 31, 255, 0.2));
