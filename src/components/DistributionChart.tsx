@@ -8,14 +8,15 @@ import DonutChart from './DonutChart'
 import ChartHelper from './DonutChartHelper'
 
 const DistributionChart = () => {
-
+  const isBrowser = typeof window !== "undefined"
+  let width = 0
   const [data, setData] = useState<Types.Data[]>([{}])
 
   const [propertiesNames] = useState(['name', 'value'])
   
-  const chartRef = useRef(HTMLDivElement)
-  let { height } = useWindowDimensions()
-  let width = chartRef.current.clientWidth
+  const chartRef = React.useRef<HTMLDivElement>(null)
+  let { height } = isBrowser ? useWindowDimensions() : 0
+  width = chartRef?.current?.clientWidth || 0
   if (height > width) {
     height = width
   }
