@@ -15,7 +15,6 @@ class BlogIndex extends React.Component {
       <Layout location={this.props.location}>
         <Seo title="Blog" />
         <Hero
-          title="Articles"
           svg="/svg/lovelace-logo2.svg"
           centered={true}
         />

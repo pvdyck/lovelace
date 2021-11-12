@@ -21,6 +21,10 @@ const DistributionChart = () => {
     height = width
   }
 
+  if (height > 600) {
+    height = 600
+  }
+
   const dimensions = useRef() as { current: Types.Dimensions }
   dimensions.current = ChartHelper.getDimensions(width, height, 0, 0, 0, 0)
 

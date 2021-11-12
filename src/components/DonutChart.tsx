@@ -1,7 +1,7 @@
 import React, { useEffect, useCallback, useState } from 'react'
 import * as d3 from 'd3'
 import { Types } from './types/chart'
-// import DonutChartHelper from './DonutChartHelper'
+import SVGParticules from './SVGParticules';
 
 const DonutChart = ( props : IDonutChartProps ) => {
   const [loaded, setLoaded] = useState(false)
@@ -188,7 +188,8 @@ const DonutChart = ( props : IDonutChartProps ) => {
 
   return (
     <div id="chartWrapper" style={{position: 'relative'}}>
-      <svg id="chart-group" width='100%' height={props.dimensions.height} />
+      <SVGParticules svgWidth={props.dimensions.width > 800 ? 1 : 0}/>
+      <svg id="chart-group" width='100%' height={props.dimensions.height}  style={{zIndex: 2, position: 'relative'}}/>
     </div>
   )
 }

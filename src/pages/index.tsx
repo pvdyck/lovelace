@@ -216,7 +216,10 @@ const RootIndex = () => {
               <div className="tokenSaleElement">
                 <h4>Token Listing Information:</h4>
                 <div>
-                  <strong>CoinMarketCap:</strong> <a href='https://coinmarketcap.com/currencies/lovelace/' target='_blank'>Visit coinmarketcap</a>
+                  <strong>CoinMarketCap:</strong> <a
+                    href='https://coinmarketcap.com/currencies/lovelace/'
+                    target='_blank'
+                    rel='noreferrer'>Visit coinmarketcap</a>
                 </div>
                 <div>
                   <strong>CoinGecko:</strong> Coming soon
