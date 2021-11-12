@@ -219,7 +219,11 @@ const RootIndex = () => {
                   <strong>CoinMarketCap:</strong> <a
                     href='https://coinmarketcap.com/currencies/lovelace/'
                     target='_blank'
-                    rel='noreferrer'>Visit coinmarketcap</a>
+                    rel='noreferrer'>Click Here</a>
+                </div>
+
+                <div>
+                  <strong>TGE:</strong> November, 29th
                 </div>
                 <div>
                   <strong>CoinGecko:</strong> Coming soon
