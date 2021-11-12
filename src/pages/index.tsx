@@ -208,12 +208,9 @@ const RootIndex = () => {
                 </div>
               </div>
               <div className="tokenSaleElement">
-                <h4>Exchanges:</h4>
+                <h4>Exchange:</h4>
                 <div>
-                  <strong>Uniswap:</strong> Coming soon
-                </div>
-                <div>
-                  <strong>Pancakeswap:</strong> Coming soon
+                  <strong>PankcakeSwap:</strong> Coming soon
                 </div>
               </div>
               <div className="tokenSaleElement">
