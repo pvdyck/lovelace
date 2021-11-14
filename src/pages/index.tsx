@@ -195,7 +195,10 @@ const RootIndex = () => {
             <div className="tokenSaleWrapper">
               <div className="tokenSaleElement">
                 <div>
-                  <strong>Token Ticker:</strong>	LACE
+                  <strong>Token Ticker:</strong> LACE
+                </div>
+                <div>
+                  <strong>TGE:</strong> November, 29th
                 </div>
                 </div>
               <div className="tokenSaleElement">
@@ -220,10 +223,6 @@ const RootIndex = () => {
                     href='https://coinmarketcap.com/currencies/lovelace/'
                     target='_blank'
                     rel='noreferrer'>Click Here</a>
-                </div>
-
-                <div>
-                  <strong>TGE:</strong> November, 29th
                 </div>
                 <div>
                   <strong>CoinGecko:</strong> Coming soon
