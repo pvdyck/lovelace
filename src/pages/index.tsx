@@ -213,7 +213,7 @@ const RootIndex = () => {
               <div className="tokenSaleElement">
                 <h4>Exchange:</h4>
                 <div>
-                  <strong>PankcakeSwap:</strong> Coming soon
+                  <strong>Pancakeswap:</strong> Coming soon
                 </div>
               </div>
               <div className="tokenSaleElement">
