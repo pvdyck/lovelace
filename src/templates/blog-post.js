@@ -26,6 +26,7 @@ class BlogPostTemplate extends React.Component {
     const previous = get(this.props, 'data.previous')
     const next = get(this.props, 'data.next')
     const svg = post.svg?.file?.url
+    const heroImageNoText = post.heroImageNoText?.gatsbyImageData
 
     return (
       <Layout location={this.props.location}>
@@ -36,6 +37,7 @@ class BlogPostTemplate extends React.Component {
         />
         <Hero
           image={post.heroImage.gatsbyImageData}
+          heroImageNoText={heroImageNoText}
           svg={svg}
           title={post.title}
           content={post.description.childMarkdownRemark.excerpt}
@@ -92,6 +94,12 @@ export const pageQuery = graphql`
       publishDate(formatString: "MMMM Do, YYYY")
       rawDate: publishDate
       heroImage {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, width: 1280)
+        resize(height: 630, width: 1200) {
+          src
+        }
+      }
+      heroImageNoText {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, width: 1280)
         resize(height: 630, width: 1200) {
           src

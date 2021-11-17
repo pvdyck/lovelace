@@ -12,13 +12,17 @@ import {
   blogParticles
 } from './styles/hero.module.less'
 
-const Hero = ({ image, svg, title, content, centered }: any) => (
+const Hero = ({ image, svg, title, content, centered, heroImageNoText }: any) => (
   <div className={blogHero}>
     { svg ? (
       <div className={blogParticles}>
         <SVGParticules svg={svg}/>
       </div>
-    ) : (
+    ) : heroImageNoText ? (
+        <div className={blogImage}>
+          <GatsbyImage className={blogImage} alt={title} image={heroImageNoText} />
+        </div>
+      ) : (
         <div className={blogImage}>
           <GatsbyImage className={blogImage} alt={title} image={image} />
         </div>
