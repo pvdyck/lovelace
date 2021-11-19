@@ -198,7 +198,7 @@ const RootIndex = () => {
                   <strong>Token Ticker:</strong> LACE
                 </div>
                 <div>
-                  <strong>TGE:</strong> November, 23th
+                  <strong>TGE:</strong> November, 23rd
                 </div>
                 </div>
               <div className="tokenSaleElement">
