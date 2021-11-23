@@ -56,6 +56,7 @@ const RootIndex = () => {
     <Layout>
       <div className='landingContainer'>
         <div className='landingTextContainer'>
+          <p className='landingBSCContainer'><strong>$LACE BSC Contact Address:</strong> 0xa3499dd7dbbbd93cb0f8303f8a8ace8d02508e73</p>
           <h1 className='landingBoldText'>Realize the Potential of the Metaverse</h1>
           {/* <div className='centeredRow centeredCol'>
             <h2 className='landingLightText'>We help builders build and players play in the metaverse</h2>
