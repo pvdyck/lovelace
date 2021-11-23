@@ -195,19 +195,19 @@ const RootIndex = () => {
             <div className="tokenSaleWrapper">
               <div className="tokenSaleElement">
                 <div>
-                  <strong>Token Ticker:</strong> LACE
+                  <strong>Token Ticker:</strong> $LACE
                 </div>
                 <div>
                   <strong>TGE:</strong> November, 23rd
                 </div>
                 </div>
               <div className="tokenSaleElement">
-                <h4>LACE Contract Addresses:</h4>
-                <div>
+                <h4>$LACE Contract Addresses:</h4>
+                {/* <div>
                   <strong>ETH:</strong> Coming soon
-                </div>
-                <div>
-                  <strong>BSC:</strong> Coming soon
+                </div> */}
+                <div class="bscWrapper">
+                  <strong>BSC:</strong> 0x803d0cc250bcacbc209b2b37c7ca801bb14b24c5
                 </div>
               </div>
               <div className="tokenSaleElement">
