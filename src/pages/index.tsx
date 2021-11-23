@@ -213,7 +213,10 @@ const RootIndex = () => {
               <div className="tokenSaleElement">
                 <h4>Exchange:</h4>
                 <div>
-                  <strong>Pancakeswap:</strong> Coming soon
+                  <strong>Pancakeswap:</strong> <a
+                    href='https://pancakeswap.finance/swap?outputCurrency=0xA3499dd7dBBBD93CB0f8303f8a8AcE8D02508E73'
+                    target='_blank'
+                    rel='noreferrer'>Click Here</a>
                 </div>
               </div>
               <div className="tokenSaleElement">
