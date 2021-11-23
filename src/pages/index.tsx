@@ -203,11 +203,11 @@ const RootIndex = () => {
                 </div>
                 </div>
               <div className="tokenSaleElement">
-                <h4>$LACE Contract Addresses:</h4>
+                <h4>$LACE Contract Address:</h4>
                 {/* <div>
                   <strong>ETH:</strong> Coming soon
                 </div> */}
-                <div class="bscWrapper">
+                <div className="bscWrapper">
                   <strong>BSC:</strong> 0xa3499dd7dbbbd93cb0f8303f8a8ace8d02508e73
                 </div>
               </div>
