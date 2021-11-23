@@ -207,7 +207,7 @@ const RootIndex = () => {
                   <strong>ETH:</strong> Coming soon
                 </div> */}
                 <div class="bscWrapper">
-                  <strong>BSC:</strong> 0x803d0cc250bcacbc209b2b37c7ca801bb14b24c5
+                  <strong>BSC:</strong> 0xa3499dd7dbbbd93cb0f8303f8a8ace8d02508e73
                 </div>
               </div>
               <div className="tokenSaleElement">
