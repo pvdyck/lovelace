@@ -56,7 +56,10 @@ const RootIndex = () => {
     <Layout>
       <div className='landingContainer'>
         <div className='landingTextContainer'>
-          <p className='landingBSCContainer'><strong>$LACE BSC Contact Address:</strong> 0xa3499dd7dbbbd93cb0f8303f8a8ace8d02508e73</p>
+          <p className='landingBSCContainer'><strong>$LACE BSC Contact Address:</strong> <a
+                    href='https://pancakeswap.finance/swap?outputCurrency=0xA3499dd7dBBBD93CB0f8303f8a8AcE8D02508E73'
+                    target='_blank'
+                    rel='noreferrer'>0xa3499dd7dbbbd93cb0f8303f8a8ace8d02508e73</a></p>
           <h1 className='landingBoldText'>Realize the Potential of the Metaverse</h1>
           {/* <div className='centeredRow centeredCol'>
             <h2 className='landingLightText'>We help builders build and players play in the metaverse</h2>
@@ -208,7 +211,10 @@ const RootIndex = () => {
                   <strong>ETH:</strong> Coming soon
                 </div> */}
                 <div className="bscWrapper">
-                  <strong>BSC:</strong> 0xa3499dd7dbbbd93cb0f8303f8a8ace8d02508e73
+                  <strong>BSC:</strong> <a
+                    href='https://pancakeswap.finance/swap?outputCurrency=0xA3499dd7dBBBD93CB0f8303f8a8AcE8D02508E73'
+                    target='_blank'
+                    rel='noreferrer'>0xa3499dd7dbbbd93cb0f8303f8a8ace8d02508e73</a>
                 </div>
               </div>
               <div className="tokenSaleElement">
