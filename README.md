@@ -1,6 +1,6 @@
 # Loavelace
 
-Base on [Gatsby](http://gatsbyjs.com/)  and powered by [Contentful](https://www.contentful.com).
+Base on [Gatsby](http://gatsbyjs.com/) and powered by [Contentful](https://www.contentful.com).
 
 ![Lovelace homepage](./screenshot.png "Lovelace homepage")
 
